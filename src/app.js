@@ -17,12 +17,12 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 // Importar rutas
-const autorRoutes = require('./routes/autorRoutes');
-const libroRoutes = require('./routes/libroRoutes');
+const autorRoutes = require('./routes/autorroutes');
+const libroRoutes = require('./routes/libroroutes');
 
 // Usar rutas
-app.use('/autores', autorRoutes);
-app.use('/libros', libroRoutes);
+app.use('/autores', autorroutes);
+app.use('/libros', libroroutes);
 
 // Ruta raíz de prueba
 app.get('/', (req, res) => {

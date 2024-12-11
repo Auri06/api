@@ -4,7 +4,7 @@ const Autor = require('./models/autor');
 const Libro = require('./models/libro');
 
 const app = express();
-const puerto = process.env.PORT || 3000;
+const puerto = process.env.PORT || 80;
 
 // Middleware para CORS
 app.use((req, res, next) => {

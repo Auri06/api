@@ -4,7 +4,8 @@ const Autor = require('./models/autor');
 const Libro = require('./models/libro');
 
 const app = express();
-const puerto = process.env.PORT || 80;
+
+const PORT = 80;
 
 // Middleware para CORS
 app.use((req, res, next) => {
@@ -42,7 +43,7 @@ biblioteca.agregarLibro(libro1);
 biblioteca.agregarLibro(libro2);
 
 // Solo si no está siendo importado como módulo
-
+app.listen(80)
 
 // Exportar la aplicación para Vercel
 module.exports = app;

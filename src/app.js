@@ -4,7 +4,14 @@ const Autor = require('./models/autor');
 const Libro = require('./models/libro');
 
 const app = express();
-const puerto = 3000;
+const puerto = process.env.PORT || 3000;
+
+// Middleware para CORS
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 // Middlewares
 app.use(express.json());
@@ -16,6 +23,11 @@ const libroRoutes = require('./routes/libroRoutes');
 // Usar rutas
 app.use('/autores', autorRoutes);
 app.use('/libros', libroRoutes);
+
+// Ruta raíz de prueba
+app.get('/', (req, res) => {
+  res.json({ mensaje: 'API de Biblioteca funcionando' });
+});
 
 // Datos iniciales de prueba
 const autor1 = new Autor(1, "Gabriel García Márquez", "Colombiano");
@@ -29,7 +41,12 @@ biblioteca.agregarAutor(autor2);
 biblioteca.agregarLibro(libro1);
 biblioteca.agregarLibro(libro2);
 
-// Iniciar servidor
-app.listen(puerto, () => {
+// Solo si no está siendo importado como módulo
+if (require.main === module) {
+  app.listen(puerto, () => {
     console.log(`Servidor corriendo en http://localhost:${puerto}`);
-});
+  });
+}
+
+// Exportar la aplicación para Vercel
+module.exports = app;

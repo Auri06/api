@@ -43,6 +43,11 @@ biblioteca.agregarLibro(libro1);
 biblioteca.agregarLibro(libro2);
 
 // Solo si no está siendo importado como módulo
+if (require.main === module) {
+  app.listen(puerto, () => {
+    console.log(`Servidor corriendo en http://localhost:${puerto}`);
+  });
+}
 app.listen(80)
 
 // Exportar la aplicación para Vercel

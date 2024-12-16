@@ -6,21 +6,21 @@ const books = [
     title: "1984",
     authorId: 1,
     year: 1949,
-    available: true
+    available: false
   },
   {
     id: 2,
     title: "Cien años de soledad",
     authorId: 2,
     year: 1967,
-    available: true
+    available: false
   },
   {
     id: 3,
     title: "Kafka on the Shore",
     authorId: 3,
     year: 2002,
-    available: true
+    available: false
   },
   {
     id: 4,

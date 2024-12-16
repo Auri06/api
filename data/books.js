@@ -1,11 +1,12 @@
 const books = [
  
+ 
   {
     id: 1,
     title: "1984",
     authorId: 1,
     year: 1949,
-    available: false
+    available: true
   },
   {
     id: 2,
@@ -19,13 +20,14 @@ const books = [
     title: "Kafka on the Shore",
     authorId: 3,
     year: 2002,
-    available: false
+    available: true
+  },
   {
     id: 4,
     title: "Mrs. Dalloway",
     authorId: 4,
     year: 1925,
-    available: false
+    available: true
   },
   {
     id: 5,
@@ -39,7 +41,7 @@ const books = [
     title: "Guerra y Paz",
     authorId: 6,
     year: 1869,
-    available: false
+    available: true
   },
   {
     id: 7,
@@ -60,7 +62,7 @@ const books = [
     title: "La metamorfosis",
     authorId: 9,
     year: 1915,
-    available: false
+    available: true
   },
   {
     id: 10,
@@ -81,7 +83,7 @@ const books = [
     title: "La insoportable levedad del ser",
     authorId: 12,
     year: 1984,
-    available: false
+    available: true
   },
   {
     id: 13,
@@ -95,7 +97,7 @@ const books = [
     title: "Rayuela",
     authorId: 14,
     year: 1963,
-    available: false
+    available: true
   },
   {
     id: 15,
@@ -130,7 +132,7 @@ const books = [
     title: "Americanah",
     authorId: 19,
     year: 2013,
-    available: false
+    available: true
   },
   {
     id: 20,
@@ -151,7 +153,7 @@ const books = [
     title: "El cuaderno dorado",
     authorId: 22,
     year: 1962,
-    available: false
+    available: true
   },
   {
     id: 23,
@@ -186,7 +188,7 @@ const books = [
     title: "Dientes blancos",
     authorId: 27,
     year: 2000,
-    available: false
+    available: true
   },
   {
     id: 28,
@@ -200,7 +202,8 @@ const books = [
     title: "Mi nombre es Rojo",
     authorId: 29,
     year: 1998,
-    available: false
+    available: true
+  },
   {
     id: 30,
     title: "Desgracia",

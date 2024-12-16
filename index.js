@@ -7,16 +7,16 @@ const booksRouter = require('./routes/books');
 const app = express();
 const PORT = process.env.PORT || 80
 
-// Middleware
+
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
-// Routes
+
 app.use('/authors', authorsRouter);
 app.use('/books', booksRouter);
 
-// Root endpoint
+
 app.get('/', (req, res) => {
   res.json({
     message: 'Welcome to the Books API',
